@@ -1,0 +1,186 @@
+ @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+body {
+    background: #2C3333;
+    font-family: 'Karla', sans-serif;
+
+}
+div#centerresults,
+div#spaceresults,
+div#launchersresults,
+div#countriesresultsContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    text-align: center;
+}
+.center-sec h2,
+.spacecraft-sec h2,
+.launcher-sec h2,
+.countries-info h2{
+    color: #576CBC;
+}
+.center-sec p,
+.spacecraft-sec p,
+.countries-info p {
+    color: #0E8388;
+}
+
+.centers-sec h1::before,
+.space-sec h1::before,
+.launch-sec h1::before,
+.countiressec h1::before{
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: " ";
+    position: absolute;
+}
+
+.centers-sec h1::before{
+    background-image: url(./images/headquater.png);
+    left: 56%;
+}
+.space-sec h1::before{
+    background-image: url(./images/rocket.png);
+    left: 59%;
+}
+.launch-sec h1::before{
+    background-image: url(./images/launcher.png);
+    left: 58%;
+}
+.countiressec h1::before{
+    background-image: url(./images/countries.png);
+    left: 58%;
+}
+
+
+.center-sec,
+.spacecraft-sec,
+.launcher-sec,
+.countries-info{
+    background: #182747;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    border-radius: 10px;
+    padding: 0 25px;
+}
+    
+.centers-sec h1,
+.space-sec h1,
+.launch-sec h1,
+.countiressec h1 {
+    font-size: 2.5rem;
+    color: #790252;
+    text-align: center;
+}
+.countiressec,
+.centers-sec,
+.space-sec,
+.launch-sec {
+    margin-top: 60px;
+}
+.inputsection {
+    color: #790252;
+    font-size: 30px;
+    font-family: 'Karla';
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.inputsection input#country-input {
+    padding: 10px 40px;
+    border-radius: 7px;
+}
+
+
+
+
+/* Responsive */
+
+/*----------------------------- Large Screen - 1 -------------------------------*/
+@media only screen and (max-width :1700px) and (min-width: 1367px) {
+    
+}
+
+/*----------------------------- Large Screen - 2 -------------------------------*/
+@media only screen and (max-width :1366px) and (min-width: 1281px) {
+
+}
+
+/*----------------------------- Small Laptop -------------------------------*/
+@media only screen and (max-width :1280px) and (min-width: 1101px) {
+
+}
+
+/*----------------------------- Media 1024 -------------------------------*/
+@media only screen and (max-width :1100px){
+    .countiressec h1::before,
+    .centers-sec h1::before,
+    .launch-sec h1::before{
+        left: 60%;
+    }
+    .space-sec h1::before {
+        left: 62%;
+    }
+    .countiressec h1::before,
+    .centers-sec h1::before,
+    .launch-sec h1::before{
+        left: 64%;
+    }
+    .space-sec h1::before {
+        left: 65%;
+    }
+}
+
+
+/*----------------------------- Media 768 -------------------------------*/
+@media only screen and (max-width:999px){
+    div#centerresults, 
+    div#spaceresults, 
+    div#launchersresults, 
+    div#countriesresultsContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+		
+}
+
+/*----------------------------- Media 480 -------------------------------*/
+@media only screen and (max-width:767px){
+    div#centerresults, div#spaceresults, div#launchersresults, div#countriesresultsContainer {
+        grid-template-columns: 1fr;
+    }
+    .countiressec h1::before,
+    .centers-sec h1::before,
+    .launch-sec h1::before{
+        left: 72%;
+    }
+    .space-sec h1::before {
+        left: 75%;
+    }
+    .inputsection {
+        flex-direction: column;
+    }
+
+
+}
+
+
+/*----------------------------- Media 320 -------------------------------*/
+@media only screen and (max-width:479px){
+
+    .centers-sec h1,
+    .space-sec h1,
+    .launch-sec h1,
+    .countiressec h1 {
+        font-size: 2.2rem;
+    }
+    .space-sec h1::before {
+        left: 82%;
+    }
+    
+}
